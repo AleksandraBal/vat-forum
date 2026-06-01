@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI & Tax</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles-vat-forum.css">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: Title -->
+      <section id="title" style="padding: 48px 60px 60px 60px !important; display: flex !important; flex-direction: column !important; justify-content: space-between; height: 100% !important; box-sizing: border-box;">
+        <!-- Center content -->
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: 20px;">
+          <div class="title-label-bar">
+            <div class="title-label">24th Annual VAT Summit</div>
+          </div>
+          <h1 class="title-main">AI &amp; Tax</h1>
+        </div>
+
+        <!-- Author / date -->
+        <div>
+          <div class="title-author">Dr Aleksandra Bal</div>
+          <div class="title-date">4 June 2026</div>
+        </div>
+
+        <!-- Geometric corner accent (SVG) -->
+        <svg class="geo-accent" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+          <rect x="80" y="90" width="110" height="65" fill="#00D4FF"/>
+          <rect x="105" y="60" width="90" height="60" fill="#0A2540"/>
+          <rect x="125" y="110" width="80" height="70" fill="#635BFF"/>
+        </svg>
+      </section>
+
+      <!-- SLIDE 2: Right tool, not newest -->
+      <section id="slide-2" style="padding: 40px 60px 48px 60px !important; display: flex !important; flex-direction: column !important; height: 100% !important; box-sizing: border-box;">
+        <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: 3fr 2fr; gap: 48px; padding-top: 16px;">
+          <div style="border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F0F4F8; min-height: 0;">
+            <img src="image/img_slide2.png" alt="AI robot presenting transportation options" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+          </div>
+          <div class="slide-text-block">
+            <p>There is now an AI tool for almost every task.</p>
+            <p>That does not mean every task needs one.</p>
+            <p>Choosing the right tool matters more than choosing the newest one.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: AI limits -->
+      <section id="slide-3" style="padding: 40px 60px 48px 60px !important; display: flex !important; flex-direction: column !important; height: 100% !important; box-sizing: border-box;">
+        <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: 3fr 2fr; gap: 48px; padding-top: 16px;">
+          <div style="border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F0F4F8; min-height: 0;">
+            <img src="image/img_slide_3.png" alt="McDonald's AI bot giving coding help" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+          </div>
+          <div class="slide-text-block">
+            <p>AI will give you a confident answer to almost any question.</p>
+            <p>Whether it should is a different question.</p>
+            <p>Every AI tool has limits. Not every user knows where they are.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: New technology starts with limits -->
+      <section id="slide-4" style="padding: 40px 60px 48px 60px !important; display: flex !important; flex-direction: column !important; height: 100% !important; box-sizing: border-box;">
+        <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: 3fr 2fr; gap: 48px; padding-top: 16px;">
+          <div style="border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F0F4F8; min-height: 0;">
+            <img src="image/img_slide_4.png" alt="Google Maps Beta 2005" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+          </div>
+          <div class="slide-text-block">
+            <p>Every new technology starts with limits.</p>
+            <p>LLMs are not search engines, and they are not databases of verified facts.</p>
+            <p>Judging them as if they were is the wrong test.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: AI layoffs -->
+      <section id="slide-5" style="padding: 40px 60px 48px 60px !important; display: flex !important; flex-direction: column !important; height: 100% !important; box-sizing: border-box;">
+        <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: 3fr 2fr; gap: 48px; padding-top: 16px;">
+          <div style="border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F0F4F8; min-height: 0;">
+            <img src="image/img_slide_5.png" alt="Comic strip about AI replacing workers" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+          </div>
+          <div class="slide-text-block">
+            <p>The headlines about AI layoffs are hard to miss.</p>
+            <p>Every transformative technology rearranges work — it does not only erase it.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: New tax problems -->
+      <section id="slide-6" style="padding: 40px 60px 48px 60px !important; display: flex !important; flex-direction: column !important; height: 100% !important; box-sizing: border-box;">
+        <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: 3fr 2fr; gap: 48px; padding-top: 16px;">
+          <div style="border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F0F4F8; min-height: 0;">
+            <img src="image/_img_slide_6.png" alt="Cartoon about AI agent economy and tax problems" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+          </div>
+          <div class="slide-text-block">
+            <p>Every new technology invents new tax problems.</p>
+            <p style="visibility: hidden;">&nbsp;</p>
+            <p>Sometimes the thing you're afraid of becomes your next client.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: Don't build agents, build skills -->
+      <section id="slide-7" style="padding: 40px 60px 48px 60px !important; display: flex !important; flex-direction: column !important; height: 100% !important; box-sizing: border-box;">
+        <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: 3fr 2fr; gap: 48px; padding-top: 16px;">
+          <!-- Left: image + link -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="flex: 1; min-height: 0; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F0F4F8;">
+              <img src="image/img_slide_7.png" alt="Anthropic engineers presenting Don't Build Agents Build Skills" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+            <div><a class="slide-link" href="#">Don't build agents, build skills</a></div>
+          </div>
+          <!-- Right: text -->
+          <div class="slide-text-block">
+            <p>Two engineers from Anthropic asked:</p>
+            <p>if you needed help with your tax return, would you choose:</p>
+            <ul class="option-list">
+              <li>an AI assistant</li>
+              <li>a human experienced tax professional who's been doing this for years?</li>
+            </ul>
+            <p>Almost everyone picks the human.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <!-- Highlight plugin: syntax highlighting for code blocks -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <!-- Notes plugin: speaker notes (press S to open) -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'fade',
+      center: false,
+      plugins: [ RevealHighlight, RevealNotes, RevealChart ],
+      chart: {
+        defaults: Object.assign({
+          color: 'rgba(0, 0, 0, 0.8)',
+          borderColor: 'rgba(0, 0, 0, 0.8)',
+          devicePixelRatio: 2
+        }, window.location.search.includes('export') ? { animation: false } : {})
+      }
+    });
+  </script>
+</body>
+</html>

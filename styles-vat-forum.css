@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --background-color: #ffffff;
+  --section-divider-bg: #ffffff;
+
+  --heading-font: "Inter", Helvetica, Arial, sans-serif;
+  --body-font: "Inter", Helvetica, Arial, sans-serif;
+  --base-font-size: 32px;
+  --text-size: 15pt;
+  --h1-size: 52pt;
+  --h2-size: 32pt;
+  --h3-size: 22pt;
+  --footnote-size: 10pt;
+
+  /* Stripe palette */
+  --navy: #0A2540;
+  --purple: #635BFF;
+  --cyan: #00D4FF;
+  --primary-color: #635BFF;
+  --secondary-color: #00D4FF;
+  --text-color: #0A2540;
+  --body-text-color: #4A5568;
+  --muted-color: #718096;
+  --line-color: #E2E8F0;
+  --placeholder-bg: #F0F4F8;
+
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 20px;
+  --box-radius: 8px;
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+}
+
+.reveal strong, .reveal b { font-weight: 700; }
+
+.reveal-viewport {
+  background-color: var(--background-color);
+}
+
+.reveal h1, .reveal h2, .reveal h3,
+.reveal h4, .reveal h5, .reveal h6 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0; }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p, .reveal li, .reveal td, .reveal th {
+  font-size: var(--text-size);
+  color: var(--body-text-color);
+  line-height: 1.6;
+}
+
+.reveal blockquote p { font-size: inherit; }
+
+/* ============================================
+   LISTS — disabled (no bullets in this deck)
+   ============================================ */
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.reveal ul li { padding-left: 0; margin-bottom: 0; }
+.reveal ul li::before { display: none; }
+
+/* ============================================
+   SLIDE LAYOUT
+   ============================================ */
+
+.reveal .slides section {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .slides section.stack {
+  padding: 0 !important;
+}
+
+.reveal .slides section > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--content-gap);
+  text-align: left;
+}
+
+.reveal .slides section > .footnote {
+  position: absolute;
+  bottom: 15px;
+  left: var(--slide-padding);
+  right: var(--slide-padding);
+  font-size: var(--footnote-size);
+  color: var(--muted-color);
+}
+
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+
+.text-lg  { font-size: 18pt !important; }
+.text-xl  { font-size: 20pt !important; }
+.text-2xl { font-size: 24pt !important; }
+.text-3xl { font-size: 28pt !important; }
+.text-4xl { font-size: 32pt !important; }
+
+.text-muted    { color: var(--muted-color) !important; }
+.text-center   { text-align: center !important; }
+.text-navy     { color: var(--navy) !important; }
+.text-purple   { color: var(--purple) !important; }
+.font-bold     { font-weight: 700; }
+
+/* ============================================
+   STRIPE WORDMARK
+   ============================================ */
+
+.reveal .stripe-wordmark,
+.stripe-wordmark {
+  font-family: var(--heading-font) !important;
+  font-weight: 800 !important;
+  font-size: 22pt !important;
+  color: var(--navy) !important;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* ============================================
+   TITLE SLIDE SPECIFICS
+   ============================================ */
+
+.reveal .title-label,
+.title-label {
+  font-family: var(--heading-font);
+  font-size: 11pt !important;
+  font-weight: 700 !important;
+  color: var(--purple) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 !important;
+  line-height: 1.4;
+}
+
+.title-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.title-label-bar::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 26px;
+  background: var(--purple);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* h1.title-main overrides the default h1 size */
+.reveal h1.title-main,
+h1.title-main {
+  font-size: 68pt !important;
+  font-weight: 800 !important;
+  color: var(--navy) !important;
+  line-height: 1.0 !important;
+  margin: 0 0 36px 0 !important;
+  letter-spacing: -0.02em;
+  text-transform: none !important;
+}
+
+.reveal .title-author,
+.title-author {
+  font-family: var(--heading-font);
+  font-size: 14pt !important;
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.reveal .title-date,
+.title-date {
+  font-family: var(--heading-font);
+  font-size: 13pt !important;
+  font-weight: 500 !important;
+  color: var(--purple) !important;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Geometric corner accent */
+.geo-accent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+}
+
+/* ============================================
+   IMAGE PLACEHOLDER
+   ============================================ */
+
+.img-placeholder {
+  background: var(--placeholder-bg);
+  border-radius: var(--box-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  min-height: 280px;
+}
+
+.reveal .img-placeholder p,
+.img-placeholder p {
+  font-size: 10pt !important;
+  color: #718096 !important;
+  font-style: italic !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* ============================================
+   CONTENT SLIDES — text paragraphs
+   ============================================ */
+
+.slide-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 0;
+}
+
+.reveal .slide-text-block p,
+.slide-text-block p {
+  font-size: 20pt !important;
+  color: #4A5568 !important;
+  line-height: 1.6 !important;
+  margin: 0 0 24px 0 !important;
+  padding: 0;
+}
+
+.slide-text-block p:last-child {
+  margin-bottom: 0;
+}
+
+.slide-link {
+  font-size: 11pt;
+  font-style: italic;
+  color: var(--purple);
+  text-decoration: underline;
+  margin-top: 10px;
+  display: block;
+}
+
+/* ============================================
+   SLIDE 7 — smaller text to fit longer content
+   ============================================ */
+
+#slide-7 .slide-text-block p {
+  font-size: 17pt !important;
+  margin: 0 0 18px 0 !important;
+}
+
+/* ============================================
+   OPTION LIST — bullet points with purple dash
+   ============================================ */
+
+.reveal .option-list,
+.option-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 0 20px 0 !important;
+}
+
+.reveal .option-list li,
+.option-list li {
+  font-size: 17pt !important;
+  color: #4A5568 !important;
+  line-height: 1.5 !important;
+  padding-left: 28px !important;
+  position: relative;
+  margin-bottom: 12px !important;
+}
+
+.reveal .option-list li::before,
+.option-list li::before {
+  display: block !important;
+  content: '•' !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #635BFF !important;
+  font-weight: 700;
+}
